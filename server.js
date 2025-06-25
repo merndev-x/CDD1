@@ -6,7 +6,11 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(
   cors({
-    origin: "https://blaze-studio-stage.onrender.com",
+        origin: [
+      "https://blaze-studio-stage.onrender.com",
+      "http://localhost:5173"
+    ],
+    // origin: "https://blaze-studio-stage.onrender.com",
     credentials: true,
   })
 );
